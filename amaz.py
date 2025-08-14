@@ -15,7 +15,7 @@ class Command(BaseCommand):
     @staticmethod
     def handle(*args, **options):
         # … selenium …
-        Chrome: {
+        Chrome = {
             "headless": False,
             "slowMo": 30,
             "ignoreHTTPSErrors": True,
@@ -77,7 +77,7 @@ class Command(BaseCommand):
         sleep(2)
         pay.execute_script("window.scroll(1,5)")
         sleep(2)
-        ammount = pay.find_element_by_xpath(
+        amount = pay.find_element_by_xpath(
             "/html/body/div[3]/div/div/div/div/div[1]/div[1]/div/table/tbody/tr[10]/td/div[1]/div[2]/span/span/input").click()
         sleep(3)
         pay.find_element_by_id('payButtonText').click()  # paybutton
